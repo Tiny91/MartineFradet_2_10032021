@@ -1,4 +1,5 @@
-		/* commun à toute la page*/
+
+		/* commun à toute la page */
 body
 {font-family: 'Raleway', sans-serif;
  width: 95%;
@@ -8,26 +9,21 @@ a
 {text-decoration: none;}
 
 h2
-{font-weight: bolder;}
+{font-weight: bold;}
 
-.legende
-{font-weight: bold;
-text-indent: 10px;}
+.legende /*nom des hotels et des activités*/
+{font-weight: bold;}
 
-figure
-{box-shadow: 6px 5px 10px #f2f2f2;
-border-radius: 20px;
-font-size: smaller;}
+figure  /*proprietes communes à toutes les figures: marges,angles arrondis*/
+{border-radius: 20px;
+margin: 15px;
+padding: 5px;}
 
-img
-{padding :5px}
 
-		/*mise en forme du header: logo et menu*/
+		/* header: logo et menu*/
 header
 {display: flex;
 justify-content: space-between;}
-
-#entete
 
 .logo
 {width: 100px;}
@@ -37,7 +33,7 @@ justify-content: space-between;}
 
 #menu ul
 {display: flex;
-justify-content: space-between;
+justify-content: space-around;
 min-width: 300px;}
 
 li
@@ -48,15 +44,200 @@ li
 color: #0065fc}
 
 .inscrire
-{font-weight: bolder;
+{font-weight: bold;
 color: #0065fc}
 
 
-		/*mise en forme du footer: */
+		/* footer */
 footer
 {font-size: 0.8em;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
+background-color: #f2f2f2;}
+
+
+		/* module de recherche*/
+
+#recherche /* alignement et hauteur du formulaire*/
+{display: flex;
+height: 30px;}
+
+.fa-map-marker-alt /* icone localisation*/
+{background-color: #f2f2f2;
+padding: 6px 10px 6px 10px;
+border-radius:7px 0px 0px 7px;
+text-align: center;}
+
+input	/*champ de reherche*/
+{border-color: #f2f2f2;
+width: 250px;
+font-weight: bold;
+text-indent: 5px;}
+	
+label 	/*bouton recherche*/
+{background-color: #0065fc;
+color: white;
+padding: 5px 10px 5px 10px;
+border-radius:0px 7px 7px 0px;}
+
+
+		/*les filtres*/
+
+#filtres
+{display: flex;}
+
+#filtres p 	/* les 4 boutons-filtres*/
+{font-weight: bold;
+border-radius: 20px;
+border: 3px #f2f2f2 solid; 
+margin-right:  30px;
+margin-left:  30px; /* espacement bouton*/
+padding-right: 30px; /* marge interieure bouton*/
+}
+
+#filtres p:hover /* changement d'aspect au survol des boutons filtres*/
+{color: white;
+background-color:#0065fc;}
+
+
+#filtres p i /* les 4 icones des filtres*/
+{background-color:#deebff;
+color: #0065fc;
+border-radius: 13px;
+border: 1px #deebff solid;
+width: 25px;
+height: 25px;
+text-align: center;}
+
+.fa-info /* icone info*/
+{color: #0065fc;
+font-size: 0.8em;
+border-radius: 5px;
+width: 10px;
+height: 10px;
+border: 2px #f2f2f2 solid;}
+
+
+			/* commun à la section hébergement*/
+
+#hebergement /* 2 blocs cote à cote*/
+{display:flex;}
+
+.fa-star /* couleur et taille des etoiles*/
+{color: #0065fc;
+font-size: 0.8em;}
+
+	
+			/* Hebergement Marseille*/
+
+#hotels 	/* forme et couleur du bloc hotel*/
+{max-width: 70%;
 background-color: #f2f2f2;
-padding-left: 20px;
-padding-right: 50px;}
+border-radius: 20px;
+margin-right: 10px;
+padding: 5px 10px 15px 5px;}
+
+#hotels h2 
+{text-indent: 30px;}
+
+#cartes 	/* alignement et retour ligne des 6 boites cartes */
+{display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin-right: 20px;
+margin-left: -10px}
+
+.boitecarte 	/* taille de chaque boite*/
+{width: 30%;
+min-width: 200px;}
+
+.boitecarte figure /*couleur, forme, taille des figures*/
+{background-color: white;
+width: 95%;
+min-width: 200px;
+box-shadow: 10px 10px 10px #c3c3c3;}
+
+.boitecarte figure img  /* proprietes photo*/
+{width: 100%;
+height: 140px;
+object-fit: cover;
+border-radius: 20px 20px 0px 0px;}
+
+
+			/*populaires*/
+
+aside   /* forme et couleur du bloc aside*/
+{max-width: 30%;
+background-color: #f2f2f2;
+border-radius: 20px;
+margin-left: 10px;}
+
+#populaires /* alignement titre + icone*/
+{display: flex;
+justify-content: space-around;}
+
+.boitepop  /* taille de chaque boite*/
+{max-width: 90%;}
+
+.boitepop figure  /*couleur, forme, taille des figures*/
+{background-color: white;
+width: 95%;
+display: flex;
+text-indent: 10px;
+box-shadow: 10px 10px 10px #c3c3c3;}
+
+.boitepop figure img /* proprietes photo*/
+{width: 100px;
+height: 124px;
+object-fit: cover;
+border-radius: 20px 0px 0px 20px;}
+
+
+
+			/*Activités*/
+
+#activites /* taille et alignement du bloc activités*/
+{display: flex;
+justify-content: space-between;
+max-width: 95%;}
+
+.boxactivite-A  /* hauteur et largeur de la boite 1figure*/
+{width: 25%;
+height: 600px;}
+
+.boxactivite-A figure /* hauteur et largeur de la figure A*/
+{width: 90%;
+height: 550px;
+box-shadow: 10px 10px 10px #f2f2f2;}
+
+.boxactivite-A img /* proprietes photo*/
+{width: 100%;
+height: 510px;
+object-fit: cover;
+border-radius: 20px 20px 0px 0px;}
+
+.boxactivite-B  /* hauteur et largeur de la boite 2figures*/
+{width: 25%;
+height: 600px}
+
+.activite1 		 /* hauteur et largeur de la figure B1*/
+{width: 90%;
+height: 300px;
+box-shadow: 10px 10px 10px #f2f2f2;}
+
+.activite2  	/* hauteur et largeur de la figure B2*/
+{width: 90%;
+height: 220px;
+box-shadow: 10px 10px 10px #f2f2f2;}
+
+.boxactivite-B img  /* proprietes photo*/
+{width: 100%;
+height: 80%;
+object-fit: cover;
+border-radius: 20px 20px 0px 0px;}
+
+
+
+
+
+
