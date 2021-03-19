@@ -1,15 +1,15 @@
 
 		/* commun à toute la page */
 body
-{font-family: 'Raleway', sans-serif;
- width: 95%;
+{font-family: 'Raleway', sans-serif;}
+
+#container  /* marge commune au header et au main*/ 
+{width: 95%;
 margin: auto;}
 
 a
-{text-decoration: none;}
-
-h2
-{font-weight: bold;}
+{text-decoration: none;
+color:black;}
 
 .legende /*nom des hotels et des activités*/
 {font-weight: bold;}
@@ -40,8 +40,8 @@ li
 {list-style-type: none;}
 
 #menu a:hover
-{text-decoration: overline;
-color: #0065fc}
+{border-top: 2px solid #0065fc;
+padding-top: 20px}
 
 .inscrire
 {font-weight: bold;
@@ -50,26 +50,28 @@ color: #0065fc}
 
 		/* footer */
 footer
-{font-size: 0.8em;
-display: flex;
+{display: flex;
 justify-content: space-around;
-background-color: #f2f2f2;}
+background-color: #f2f2f2;
+margin-top: 30px;
+padding-bottom: 40px;
+padding-top: 40px;}
 
 
 		/* module de recherche*/
 
 #recherche /* alignement et hauteur du formulaire*/
 {display: flex;
-height: 30px;}
+height: 50px;}
 
 .fa-map-marker-alt /* icone localisation*/
 {background-color: #f2f2f2;
-padding: 6px 10px 6px 10px;
-border-radius:7px 0px 0px 7px;
-text-align: center;}
+padding: 15px 15px 10px 20px;
+border-radius:15px 0px 0px 15px;
+}
 
 input	/*champ de reherche*/
-{border-color: #f2f2f2;
+{border: 1px solid #f2f2f2;
 width: 250px;
 font-weight: bold;
 text-indent: 5px;}
@@ -77,55 +79,76 @@ text-indent: 5px;}
 label 	/*bouton recherche*/
 {background-color: #0065fc;
 color: white;
-padding: 5px 10px 5px 10px;
-border-radius:0px 7px 7px 0px;}
+padding: 12px 12px 3px 12px;;
+border-radius:0px 15px 15px 0px;
+font-weight: bold;}
 
 
 		/*les filtres*/
 
 #filtres
-{display: flex;}
+{display: flex;
+margin-top: 20px;
+}
 
-#filtres p 	/* les 4 boutons-filtres*/
-{font-weight: bold;
-border-radius: 20px;
-border: 3px #f2f2f2 solid; 
+
+.filtre 	/* les 4 boutons-filtres*/
+{height: 50px;
+display: flex;
+align-items: center;
+border-radius: 40px;
+border: 2px #f2f2f2 solid; 
 margin-right:  30px;
 margin-left:  30px; /* espacement bouton*/
 padding-right: 30px; /* marge interieure bouton*/
 }
 
-#filtres p:hover /* changement d'aspect au survol des boutons filtres*/
-{color: white;
-background-color:#0065fc;}
-
-
-#filtres p i /* les 4 icones des filtres*/
+.filtre i /* les 4 icones des filtres*/
 {background-color:#deebff;
 color: #0065fc;
-border-radius: 13px;
-border: 1px #deebff solid;
-width: 25px;
-height: 25px;
-text-align: center;}
+font-size: 1.3em;
+border-radius: 27px;
+padding: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 15px;
+height:15px;
+margin-right: 10px;
+}
+
+.filtre:hover /* changement d'aspect au survol des boutons filtres*/
+{color: white;
+background-color:#0065fc;
+}
+
+#info
+{margin-top: 20px;
+margin-bottom: 25px}
 
 .fa-info /* icone info*/
 {color: #0065fc;
-font-size: 0.8em;
-border-radius: 5px;
-width: 10px;
-height: 10px;
-border: 2px #f2f2f2 solid;}
+border-radius: 30px;
+padding: 4px 10px 5px 10px;
+border: 2px #f2f2f2 solid;
+margin-right: 10px
+}
 
 
 			/* commun à la section hébergement*/
 
-#hebergement /* 2 blocs cote à cote*/
-{display:flex;}
+#sectionhebergement /* 2 blocs cote à cote*/
+{display:flex;
+justify-content: space-around;
+margin-bottom: 30px;	
+}
 
 .fa-star /* couleur et taille des etoiles*/
 {color: #0065fc;
 font-size: 0.8em;}
+
+.greystar  /* modif pour étoile grise*/
+{color: #f2f2f2;}
 
 	
 			/* Hebergement Marseille*/
@@ -135,10 +158,15 @@ font-size: 0.8em;}
 background-color: #f2f2f2;
 border-radius: 20px;
 margin-right: 10px;
-padding: 5px 10px 15px 5px;}
+padding: 20px 25px 30px 25px;
+}
 
-#hotels h2 
-{text-indent: 30px;}
+#hotels h2
+{margin-left: 25px}
+
+#afficher
+{margin-left: 25px;
+font-weight:bold;}
 
 #cartes 	/* alignement et retour ligne des 6 boites cartes */
 {display: flex;
@@ -163,56 +191,76 @@ height: 140px;
 object-fit: cover;
 border-radius: 20px 20px 0px 0px;}
 
+.boitecarte figcaption
+{margin-left: 15px}
+
+
 
 			/*populaires*/
 
 aside   /* forme et couleur du bloc aside*/
-{max-width: 30%;
-background-color: #f2f2f2;
+{background-color: #f2f2f2;
 border-radius: 20px;
-margin-left: 10px;}
+margin-left: 20px;
+padding-bottom: 20px;}
 
 #populaires /* alignement titre + icone*/
 {display: flex;
-justify-content: space-around;}
+justify-content: space-around;
+align-items: center}
+
+#populaires i
+{ font-size: 1.3em }
+
+#cartespop
+{max-width: 80%;
+margin: auto;}
 
 .boitepop  /* taille de chaque boite*/
-{max-width: 90%;}
+{display: flex;
+height: 200px}
 
 .boitepop figure  /*couleur, forme, taille des figures*/
 {background-color: white;
-width: 95%;
+width: 100%;
 display: flex;
-text-indent: 10px;
 box-shadow: 10px 10px 10px #c3c3c3;}
 
-.boitepop figure img /* proprietes photo*/
-{width: 100px;
-height: 124px;
+.boitepop img /* proprietes photo*/
+{width: 40%;
+height: 100%;
 object-fit: cover;
 border-radius: 20px 0px 0px 20px;}
 
+.boitepop figcaption
+{margin-left: 15px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;}
 
 
 			/*Activités*/
+#sectionactivités
+{display: flex;
+flex-direction: column}
 
 #activites /* taille et alignement du bloc activités*/
 {display: flex;
-justify-content: space-between;
-max-width: 95%;}
+justify-content: space-between;}
 
 .boxactivite-A  /* hauteur et largeur de la boite 1figure*/
 {width: 25%;
-height: 600px;}
+height: 600px;
+margin-left: -16px}
 
 .boxactivite-A figure /* hauteur et largeur de la figure A*/
 {width: 90%;
-height: 550px;
+height: 560px;
 box-shadow: 10px 10px 10px #f2f2f2;}
 
 .boxactivite-A img /* proprietes photo*/
 {width: 100%;
-height: 510px;
+height: 480px;
 object-fit: cover;
 border-radius: 20px 20px 0px 0px;}
 
@@ -227,7 +275,7 @@ box-shadow: 10px 10px 10px #f2f2f2;}
 
 .activite2  	/* hauteur et largeur de la figure B2*/
 {width: 90%;
-height: 220px;
+height: 230px;
 box-shadow: 10px 10px 10px #f2f2f2;}
 
 .boxactivite-B img  /* proprietes photo*/
@@ -235,6 +283,55 @@ box-shadow: 10px 10px 10px #f2f2f2;}
 height: 80%;
 object-fit: cover;
 border-radius: 20px 20px 0px 0px;}
+
+/*------------------------------------------*/
+
+				/*media queries*/
+/*-------------------------------------------*/
+
+@media screen and (max-width: 480px) /*nav mobile*/
+{
+	body
+	{width: auto;}
+
+			/*header*/
+	header
+	{flex-wrap: wrap;}
+
+	#menu ul
+	{min-width: 100px;
+	flex-wrap: wrap;}
+
+			/*footer*/
+	footer
+	{flex-direction: column;}
+
+		 	/* module de recherche*/
+	#filtres
+	{flex-direction: column;}
+
+			/*section hebergement*/
+	#hebergement
+	{flex-direction: column-reverse;
+	width: auto;}
+
+	#hotels
+	{width: auto}
+
+	aside
+	{width: auto}
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
