@@ -9,7 +9,7 @@ margin: auto;}
 
 a
 {text-decoration: none;
-color:black;}
+color: black;}
 
 .legende /*nom des hotels et des activités*/
 {font-weight: bold;}
@@ -29,23 +29,29 @@ justify-content: space-between;}
 {width: 100px;}
 
 #menu
-{width: 35%;}
+{display: flex;
+justify-content: space-between;
+align-items:center;
+}
 
 #menu ul
 {display: flex;
 justify-content: space-around;
-min-width: 300px;}
+min-width: 500px}
 
 li
 {list-style-type: none;}
 
-#menu a:hover
+nav a:hover
 {border-top: 2px solid #0065fc;
 padding-top: 20px}
 
-.inscrire
+.inscrire a
 {font-weight: bold;
-color: #0065fc}
+color: #0065fc;
+padding-left: 50px;
+
+}
 
 
 		/* footer */
@@ -81,7 +87,12 @@ label 	/*bouton recherche*/
 color: white;
 padding: 12px 12px 3px 12px;;
 border-radius:0px 15px 15px 0px;
-font-weight: bold;}
+font-weight: bold;
+}
+
+.fa-search
+{display: block;
+visibility: hidden}
 
 
 		/*les filtres*/
@@ -89,6 +100,7 @@ font-weight: bold;}
 #filtres
 {display: flex;
 margin-top: 20px;
+flex-wrap: wrap;
 }
 
 
@@ -98,8 +110,7 @@ display: flex;
 align-items: center;
 border-radius: 40px;
 border: 2px #f2f2f2 solid; 
-margin-right:  30px;
-margin-left:  30px; /* espacement bouton*/
+margin:10px 20px 10px 20px;/* espacement bouton*/
 padding-right: 30px; /* marge interieure bouton*/
 }
 
@@ -123,8 +134,11 @@ background-color:#0065fc;
 }
 
 #info
-{margin-top: 20px;
-margin-bottom: 25px}
+{display: flex;
+align-items: center;
+margin-top: 20px;
+margin-bottom: 25px
+}
 
 .fa-info /* icone info*/
 {color: #0065fc;
@@ -166,7 +180,8 @@ padding: 20px 25px 30px 25px;
 
 #afficher
 {margin-left: 25px;
-font-weight:bold;}
+font-weight: bold;}
+
 
 #cartes 	/* alignement et retour ligne des 6 boites cartes */
 {display: flex;
@@ -177,7 +192,9 @@ margin-left: -10px}
 
 .boitecarte 	/* taille de chaque boite*/
 {width: 30%;
-min-width: 200px;}
+min-width: 200px;
+margin-left: 15px;
+margin-right: 15px}
 
 .boitecarte figure /*couleur, forme, taille des figures*/
 {background-color: white;
@@ -207,22 +224,24 @@ padding-bottom: 20px;}
 #populaires /* alignement titre + icone*/
 {display: flex;
 justify-content: space-around;
-align-items: center}
+align-items: center;
+padding-top: 20px;}
 
 #populaires i
 { font-size: 1.3em }
 
 #cartespop
-{max-width: 80%;
-margin: auto;}
+{margin: 20px 15px 20px 15px;}
 
 .boitepop  /* taille de chaque boite*/
 {display: flex;
-height: 200px}
+height: 200px;
+min-width :320px;
+margin-left: 15px;
+margin-right: 15px}
 
 .boitepop figure  /*couleur, forme, taille des figures*/
 {background-color: white;
-width: 100%;
 display: flex;
 box-shadow: 10px 10px 10px #c3c3c3;}
 
@@ -233,13 +252,10 @@ object-fit: cover;
 border-radius: 20px 0px 0px 20px;}
 
 .boitepop figcaption
-{margin-left: 15px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;}
+{margin-left: 15px;}
 
 
-			/*Activités*/
+			/*section Activités*/
 #sectionactivités
 {display: flex;
 flex-direction: column}
@@ -251,7 +267,7 @@ justify-content: space-between;}
 .boxactivite-A  /* hauteur et largeur de la boite 1figure*/
 {width: 25%;
 height: 600px;
-margin-left: -16px}
+}
 
 .boxactivite-A figure /* hauteur et largeur de la figure A*/
 {width: 90%;
@@ -288,49 +304,105 @@ border-radius: 20px 20px 0px 0px;}
 
 				/*media queries*/
 /*-------------------------------------------*/
-
-@media screen and (max-width: 480px) /*nav mobile*/
+		/* pour tablette et smartphone*/
+@media screen and (max-width: 1024px)
 {
 	body
 	{width: auto;}
-
+	
 			/*header*/
 	header
 	{flex-wrap: wrap;}
 
-	#menu ul
-	{min-width: 100px;
-	flex-wrap: wrap;}
+	#menu 
+	{flex-wrap: wrap-reverse;
+	justify-content: flex-end;
+	max-width: 180px;}
 
-			/*footer*/
-	footer
-	{flex-direction: column;}
+	nav ul  /* ligne horizontale sous le menu*/
+	{border-bottom: 2px solid #f2f2f2;
+	padding-bottom: 20px}
+
+	nav a:hover /* bordure bleue sous l'element survolé*/
+	{border-top: hidden;
+	border-bottom: 2px solid #0065fc;
+	padding-bottom: 20px}
+
+	.inscrire
+	{padding-bottom: 20px;
+	}
+}
+	
+			/* pour smartphone seulement*/
+@media screen and (max-width: 600px) /*nav mobile*/
+{
+				/*footer*/
+	footer 
+	{flex-direction: column;
+	padding-left: 30px}
+
 
 		 	/* module de recherche*/
-	#filtres
-	{flex-direction: column;}
 
-			/*section hebergement*/
-	#hebergement
-	{flex-direction: column-reverse;
-	width: auto;}
+	label  /* bouton arrondi*/
+	{border-radius:15px 15px 15px 15px;}
 
-	#hotels
-	{width: auto}
+	.fa-search   /* texte rechercher remplacé par la loupe*/
+	{visibility: visible}
+	.recherche
+	{display: none;}
 
-	aside
-	{width: auto}
+	
+				/*section hebergement*/
+	#sectionhebergement /* agencement en colonnes en commencant par les populaires*/
+	{flex-direction: column-reverse;}
+
+	#hotels /* supression du fonds gris*/
+	{background-color: white;
+	margin: auto;}
+
+	.boitecarte
+	{width: 100%}
+
+	.boitecarte figure
+	{width: 100%}
+
+	.boitecarte figure img
+	{height: 120px}
 
 
+       			/*section Activités*/
 
+   #sectionactivités h2
+   {margin-left: 30px;}
 
+    #activites 
+    {flex-direction: column;}
 
+    .boxactivite-A  
+	{width: 100%;
+	height: 300px;
+	margin:auto;}
 
+	.boxactivite-A figure 
+	{height: 260px;}
 
+	.boxactivite-A img
+	{height: 200px}
 
+	.boxactivite-B  
+	{width: 100%;
+	margin:auto;}
+	
+	.activite1 		
+	{height: 260px;}
 
+	.activite2  	
+	{height: 260px;
+	}
 
-
+	.boxactivite-B img  
+	{height: 200px;}	
 }
 
 
