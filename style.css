@@ -23,33 +23,41 @@ padding: 5px;}
 		/* header: logo et menu*/
 header
 {display: flex;
-justify-content: space-between;}
+justify-content: space-between;
+flex-wrap: wrap;}
 
 .logo
-{width: 100px;}
+{width: 100px;
+}
 
 #menu
 {display: flex;
-justify-content: space-between;
 align-items:center;
 }
 
-#menu ul
+
+
+nav ul
 {display: flex;
 justify-content: space-around;
-min-width: 500px}
+min-width: 500px;
+padding-left:30px;}
 
 li
-{list-style-type: none;}
+{list-style-type: none;
+}
 
 nav a:hover
 {border-top: 2px solid #0065fc;
+color: #0065fc;
 padding-top: 20px}
+
 
 .inscrire a
 {font-weight: bold;
 color: #0065fc;
 padding-left: 50px;
+
 
 }
 
@@ -62,6 +70,9 @@ background-color: #f2f2f2;
 margin-top: 30px;
 padding-bottom: 40px;
 padding-top: 40px;}
+
+footer section
+{}
 
 
 		/* module de recherche*/
@@ -103,6 +114,13 @@ margin-top: 20px;
 flex-wrap: wrap;
 }
 
+#boxfiltres
+{display: flex;
+flex-wrap: wrap;
+}
+
+.titre
+{margin-right: 20px}
 
 .filtre 	/* les 4 boutons-filtres*/
 {height: 50px;
@@ -110,7 +128,7 @@ display: flex;
 align-items: center;
 border-radius: 40px;
 border: 2px #f2f2f2 solid; 
-margin:10px 20px 10px 20px;/* espacement bouton*/
+margin:10px 20px 10px 00px;/* espacement bouton*/
 padding-right: 30px; /* marge interieure bouton*/
 }
 
@@ -258,11 +276,15 @@ border-radius: 20px 0px 0px 20px;}
 			/*section Activités*/
 #sectionactivités
 {display: flex;
-flex-direction: column}
+flex-direction: column;
+}
 
 #activites /* taille et alignement du bloc activités*/
 {display: flex;
-justify-content: space-between;}
+}
+
+#activites figcaption
+{padding-left: 15px}
 
 .boxactivite-A  /* hauteur et largeur de la boite 1figure*/
 {width: 25%;
@@ -270,8 +292,7 @@ height: 600px;
 }
 
 .boxactivite-A figure /* hauteur et largeur de la figure A*/
-{width: 90%;
-height: 560px;
+{height: 560px;
 box-shadow: 10px 10px 10px #f2f2f2;}
 
 .boxactivite-A img /* proprietes photo*/
@@ -282,16 +303,15 @@ border-radius: 20px 20px 0px 0px;}
 
 .boxactivite-B  /* hauteur et largeur de la boite 2figures*/
 {width: 25%;
-height: 600px}
+height: 600px;
+}
 
 .activite1 		 /* hauteur et largeur de la figure B1*/
-{width: 90%;
-height: 300px;
+{height: 300px;
 box-shadow: 10px 10px 10px #f2f2f2;}
 
 .activite2  	/* hauteur et largeur de la figure B2*/
-{width: 90%;
-height: 230px;
+{height: 230px;
 box-shadow: 10px 10px 10px #f2f2f2;}
 
 .boxactivite-B img  /* proprietes photo*/
@@ -304,39 +324,51 @@ border-radius: 20px 20px 0px 0px;}
 
 				/*media queries*/
 /*-------------------------------------------*/
-		/* pour tablette et smartphone*/
+		/* commun tablette et smartphone*/
 @media screen and (max-width: 1024px)
 {
 	body
 	{width: auto;}
 	
-			/*header*/
-	header
-	{flex-wrap: wrap;}
+	#menu  /* menu sur 2 lignes avec s'inscrire en haut*/
+	{flex-direction: column-reverse;
+	align-items: center;
+	margin-top: 20px} 
 
-	#menu 
-	{flex-wrap: wrap-reverse;
-	justify-content: flex-end;
-	max-width: 180px;}
-
-	nav ul  /* ligne horizontale sous le menu*/
-	{border-bottom: 2px solid #f2f2f2;
-	padding-bottom: 20px}
-
+	
 	nav a:hover /* bordure bleue sous l'element survolé*/
 	{border-top: hidden;
 	border-bottom: 2px solid #0065fc;
 	padding-bottom: 20px}
 
-	.inscrire
-	{padding-bottom: 20px;
-	}
-}
+	
+	#sectionhebergement /* agencement en colonnes en commencant par les populaires*/
+	{}
+
+	footer
+	{font-size: 0.9em}
+	
 	
 			/* pour smartphone seulement*/
-@media screen and (max-width: 600px) /*nav mobile*/
+@media all and (max-width: 600px) /*nav mobile*/
 {
-				/*footer*/
+					/*header*/
+	#menu 
+	{align-items: flex-end;
+	width: 200px;
+	} 
+	
+	nav ul  /* ligne horizontale sous le menu*/
+	{border-bottom: 2px solid #f2f2f2;
+	padding-bottom: 20px;
+	}
+
+	nav a:hover /* bordure bleue sous l'element survolé*/
+	{border-top: hidden;
+	border-bottom: 2px solid #0065fc;
+	}
+
+					/*footer*/
 	footer 
 	{flex-direction: column;
 	padding-left: 30px}
@@ -352,10 +384,14 @@ border-radius: 20px 20px 0px 0px;}
 	.recherche
 	{display: none;}
 
-	
+		
 				/*section hebergement*/
 	#sectionhebergement /* agencement en colonnes en commencant par les populaires*/
 	{flex-direction: column-reverse;}
+
+	aside
+	{border-radius: 0px
+	}
 
 	#hotels /* supression du fonds gris*/
 	{background-color: white;
