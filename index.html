@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<div id="container">
+<div id="pagecontainer">
 	<header><!-- 2 blocs : logo, menu-->
 		<div  >
 			<img src="img/logo.png" class="logo" alt="logo reservia"/>
@@ -25,7 +25,7 @@
 				<li><a href="#sectionactivités"> Activités </a></li>
 				</ul>
 			</nav>
-			<div class= "inscrire"><a href=#> S'inscrire </a>
+			<div class= "sinscrire"><a href=#> S'inscrire </a>
 			</div>
 		</div>
 	</header>
@@ -35,7 +35,7 @@
 			<h2>Trouvez votre hébergement pour des vacances de rêve</h2>
 			<p>En plein centre ville ou en pleine nature</p>
 			<form method="post" action="traitement.php"> <!--formulaire de recherche-->
-				<div id="recherche">	
+				<div id="boxsearch">	
 					<i class="fas fa-map-marker-alt"></i>
 					<input type="search" placeholder="Marseille,France" name="Ville"/>
 					<label> <span class="recherche">Rechercher </span> <i class="fas fa-search"></i> </label>
@@ -73,8 +73,8 @@
 		<section id="sectionhebergement"> <!-- hebergements scindé en 2 blocs: div"hotel" et aside-->
 			<div id="hotels"> <!-- 3 blocs : titre, div"cartes", paragraphe-->
 				<h2>Hébergements à Marseille</h2>
-					<div id="cartes"> <!-- 6 blocs composés d'un lien et d'une  figure"image +legende"-->
-						<a href="#" class="boitecarte">
+					<div id="cards"> <!-- 6 blocs composés d'un lien et d'une  figure"image +legende"-->
+						<a href="#" class="boxcard">
 							<figure >
 								<img src="img/cannebiere.jpg" alt="Auberge la cannebière" />
 								<figcaption> <p class="legende"> Auberge la Cannebière </p>
@@ -87,7 +87,7 @@
 								</figcaption>
 							</figure>
 						</a>
-						<a href="#" class="boitecarte">
+						<a href="#" class="boxcard">
 							<figure>
 								<img src="img/hotel_port.jpg" alt="hotel du Port" />
 								<figcaption><p class="legende"> Hôtel du port </p>
@@ -100,7 +100,7 @@
 								</figcaption>
 							</figure>
 						</a>
-						<a href="#" class="boitecarte">
+						<a href="#" class="boxcard">
 							<figure>
 								<img src="img/mouettes.jpg" alt="Hotel les Mouettes"/>
 								<figcaption><p class="legende"> Hôtel Les mouettes </p>
@@ -113,7 +113,7 @@
 								</figcaption>
 							</figure>
 						</a>
-						<a href="#" class="boitecarte">
+						<a href="#" class="boxcard">
 							<figure>
 								<img src="img/hotel_mer.jpg" alt="Hôtel de la mer"/>
 								<figcaption><p class="legende"> Hôtel de la mer </p>
@@ -126,7 +126,7 @@
 								</figcaption>
 							</figure>
 						</a>
-						<a href="#" class="boitecarte">
+						<a href="#" class="boxcard">
 							<figure>
 								<img src="img/panier.jpg" alt="Auberge le Panier"/>
 								<figcaption><p class="legende"> Auberge Le Panier </p> 
@@ -139,7 +139,7 @@
 								</figcaption>
 							</figure>
 						</a>
-						<a href="#" class="boitecarte">
+						<a href="#" class="boxcard">
 							<figure>
 								<img src="img/Amina.jpg" alt="Hôtel chez Amina" />
 								<figcaption> <p class="legende"> Hôtel chez Amina </p>
@@ -162,8 +162,8 @@
 					<h2>Les plus populaires</h2>
 					<i class="fas fa-chart-line"></i>
 				</div>
-					<div id="cartespop"><!-- 3 blocs composés d'un lien et d'une figure"image +legende"-->	
-						<a href="#" class="boitepop">
+					<div id="cardspop"><!-- 3 blocs composés d'un lien et d'une figure"image +legende"-->	
+						<a href="#" class="boxpop">
 							<figure>
 								<img src="img/soleil.jpg" alt="Hôtel Le soleil du matin" />
 								<figcaption>
@@ -178,7 +178,7 @@
 								</figcaption>
 							</figure>
 						</a>
-						<a href="#" class="boitepop">
+						<a href="#" class="boxpop">
 							<figure>
 								<img src="img/coeur_eau.jpg" alt=" Chambre d'hôtes-Au coeur de l'eau" />
 								<figcaption > 
@@ -192,7 +192,7 @@
 								</figcaption>
 							</figure>
 						</a>
-						<a href="#" class="boitepop">
+						<a href="#" class="boxpop">
 							<figure>
 								<img src="img/bleu_blanc.jpg" alt="Hôtel tout bleu et blanc" />
 								<figcaption>

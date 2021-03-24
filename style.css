@@ -3,7 +3,7 @@
 body
 {font-family: 'Raleway', sans-serif;}
 
-#container  /* marge commune au header et au main*/ 
+#pagecontainer  /* marge commune au header et au main*/ 
 {width: 95%;
 margin: auto;}
 
@@ -27,14 +27,11 @@ justify-content: space-between;
 flex-wrap: wrap;}
 
 .logo
-{width: 100px;
-}
+{width: 100px;}
 
 #menu
 {display: flex;
-align-items:center;
-}
-
+align-items:center;}
 
 
 nav ul
@@ -44,8 +41,7 @@ min-width: 500px;
 padding-left:30px;}
 
 li
-{list-style-type: none;
-}
+{list-style-type: none;}
 
 nav a:hover
 {border-top: 2px solid #0065fc;
@@ -53,13 +49,10 @@ color: #0065fc;
 padding-top: 20px}
 
 
-.inscrire a
+.sinscrire a
 {font-weight: bold;
 color: #0065fc;
-padding-left: 50px;
-
-
-}
+padding-left: 50px;}
 
 
 		/* footer */
@@ -71,21 +64,18 @@ margin-top: 30px;
 padding-bottom: 40px;
 padding-top: 40px;}
 
-footer section
-{}
 
 
 		/* module de recherche*/
 
-#recherche /* alignement et hauteur du formulaire*/
+#boxsearch /* alignement et hauteur du formulaire*/
 {display: flex;
 height: 50px;}
 
 .fa-map-marker-alt /* icone localisation*/
 {background-color: #f2f2f2;
 padding: 15px 15px 10px 20px;
-border-radius:15px 0px 0px 15px;
-}
+border-radius:15px 0px 0px 15px;}
 
 input	/*champ de reherche*/
 {border: 1px solid #f2f2f2;
@@ -98,8 +88,7 @@ label 	/*bouton recherche*/
 color: white;
 padding: 12px 12px 3px 12px;;
 border-radius:0px 15px 15px 0px;
-font-weight: bold;
-}
+font-weight: bold;}
 
 .fa-search
 {display: block;
@@ -111,13 +100,11 @@ visibility: hidden}
 #filtres
 {display: flex;
 margin-top: 20px;
-flex-wrap: wrap;
-}
+flex-wrap: wrap;}
 
 #boxfiltres
 {display: flex;
-flex-wrap: wrap;
-}
+flex-wrap: wrap;}
 
 .titre
 {margin-right: 20px}
@@ -129,8 +116,7 @@ align-items: center;
 border-radius: 40px;
 border: 2px #f2f2f2 solid; 
 margin:10px 20px 10px 00px;/* espacement bouton*/
-padding-right: 30px; /* marge interieure bouton*/
-}
+padding-right: 30px;} /* marge interieure bouton*/
 
 .filtre i /* les 4 icones des filtres*/
 {background-color:#deebff;
@@ -143,28 +129,24 @@ justify-content: center;
 align-items: center;
 width: 15px;
 height:15px;
-margin-right: 10px;
-}
+margin-right: 10px;}
 
 .filtre:hover /* changement d'aspect au survol des boutons filtres*/
 {color: white;
-background-color:#0065fc;
-}
+background-color:#0065fc;}
 
 #info
 {display: flex;
 align-items: center;
 margin-top: 20px;
-margin-bottom: 25px
-}
+margin-bottom: 25px}
 
 .fa-info /* icone info*/
 {color: #0065fc;
 border-radius: 30px;
 padding: 4px 10px 5px 10px;
 border: 2px #f2f2f2 solid;
-margin-right: 10px
-}
+margin-right: 10px}
 
 
 			/* commun à la section hébergement*/
@@ -172,8 +154,7 @@ margin-right: 10px
 #sectionhebergement /* 2 blocs cote à cote*/
 {display:flex;
 justify-content: space-around;
-margin-bottom: 30px;	
-}
+margin-bottom: 30px;}
 
 .fa-star /* couleur et taille des etoiles*/
 {color: #0065fc;
@@ -190,8 +171,7 @@ font-size: 0.8em;}
 background-color: #f2f2f2;
 border-radius: 20px;
 margin-right: 10px;
-padding: 20px 25px 30px 25px;
-}
+padding: 20px 25px 30px 25px;}
 
 #hotels h2
 {margin-left: 25px}
@@ -201,34 +181,33 @@ padding: 20px 25px 30px 25px;
 font-weight: bold;}
 
 
-#cartes 	/* alignement et retour ligne des 6 boites cartes */
+#cards 	/* alignement et retour ligne des 6 boites cartes */
 {display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 margin-right: 20px;
 margin-left: -10px}
 
-.boitecarte 	/* taille de chaque boite*/
+.boxcard 	/* taille de chaque boite*/
 {width: 30%;
 min-width: 200px;
 margin-left: 15px;
 margin-right: 15px}
 
-.boitecarte figure /*couleur, forme, taille des figures*/
+.boxcard figure /*couleur, forme, taille des figures*/
 {background-color: white;
 width: 95%;
 min-width: 200px;
 box-shadow: 10px 10px 10px #c3c3c3;}
 
-.boitecarte figure img  /* proprietes photo*/
+.boxcard figure img  /* proprietes photo*/
 {width: 100%;
 height: 140px;
 object-fit: cover;
 border-radius: 20px 20px 0px 0px;}
 
-.boitecarte figcaption
+.boxcard figcaption
 {margin-left: 15px}
-
 
 
 			/*populaires*/
@@ -248,28 +227,27 @@ padding-top: 20px;}
 #populaires i
 { font-size: 1.3em }
 
-#cartespop
-{margin: 20px 15px 20px 15px;}
+#cardspop
+{margin: 00px 5px 20px 15px;}
 
-.boitepop  /* taille de chaque boite*/
+.boxpop  /* taille de chaque boite*/
 {display: flex;
 height: 200px;
 min-width :320px;
-margin-left: 15px;
 margin-right: 15px}
 
-.boitepop figure  /*couleur, forme, taille des figures*/
+.boxpop figure  /*couleur, forme, taille des figures*/
 {background-color: white;
 display: flex;
 box-shadow: 10px 10px 10px #c3c3c3;}
 
-.boitepop img /* proprietes photo*/
+.boxpop img /* proprietes photo*/
 {width: 40%;
 height: 100%;
 object-fit: cover;
 border-radius: 20px 0px 0px 20px;}
 
-.boitepop figcaption
+.boxpop figcaption
 {margin-left: 15px;}
 
 
@@ -320,53 +298,46 @@ height: 80%;
 object-fit: cover;
 border-radius: 20px 20px 0px 0px;}
 
+
 /*------------------------------------------*/
 
 				/*media queries*/
 /*-------------------------------------------*/
+
 		/* commun tablette et smartphone*/
-@media screen and (max-width: 1024px)
+
+@media screen  and (max-width: 1024px)
 {
 	body
 	{width: auto;}
-	
+		
 	#menu  /* menu sur 2 lignes avec s'inscrire en haut*/
 	{flex-direction: column-reverse;
 	align-items: center;
 	margin-top: 20px} 
-
 	
 	nav a:hover /* bordure bleue sous l'element survolé*/
 	{border-top: hidden;
 	border-bottom: 2px solid #0065fc;
 	padding-bottom: 20px}
 
-	
-	#sectionhebergement /* agencement en colonnes en commencant par les populaires*/
-	{}
-
 	footer
 	{font-size: 0.9em}
+}	
 	
-	
-			/* pour smartphone seulement*/
-@media all and (max-width: 600px) /*nav mobile*/
+			/* pour smartphone */
+
+@media screen and (min-width: 310px) and (max-width: 799px)
 {
 					/*header*/
 	#menu 
 	{align-items: flex-end;
-	width: 200px;
-	} 
+	width: 200px;	} 
 	
 	nav ul  /* ligne horizontale sous le menu*/
 	{border-bottom: 2px solid #f2f2f2;
 	padding-bottom: 20px;
-	}
-
-	nav a:hover /* bordure bleue sous l'element survolé*/
-	{border-top: hidden;
-	border-bottom: 2px solid #0065fc;
-	}
+	min-width: 350px;	}
 
 					/*footer*/
 	footer 
@@ -384,26 +355,40 @@ border-radius: 20px 20px 0px 0px;}
 	.recherche
 	{display: none;}
 
+	.filtre 	/* les 4 boutons-filtres*/
+	{margin: 3px 15px 3px 0px;/* espacement bouton*/
+	padding-right: 10px; /* marge interieure bouton*/
+	font-size: 0.8em;}
+
 		
 				/*section hebergement*/
 	#sectionhebergement /* agencement en colonnes en commencant par les populaires*/
 	{flex-direction: column-reverse;}
 
-	aside
-	{border-radius: 0px
-	}
+	aside /* plus de bords arrondis*/
+	{border-radius: 0px	}
+
+	#cardspop
+	{margin: auto;}
+
+	.boxpop  /* taille de chaque boite*/
+	{min-height: 240px;
+	 min-width :310px;}
+
+	.boxpop img /*ajustement photo*/
+	{min-width: 40%;}
 
 	#hotels /* supression du fonds gris*/
 	{background-color: white;
 	margin: auto;}
 
-	.boitecarte
+	.boxcard
 	{width: 100%}
 
-	.boitecarte figure
+	.boxcard figure
 	{width: 100%}
 
-	.boitecarte figure img
+	.boxcard figure img
 	{height: 120px}
 
 
@@ -434,11 +419,11 @@ border-radius: 20px 20px 0px 0px;}
 	{height: 260px;}
 
 	.activite2  	
-	{height: 260px;
-	}
+	{height: 260px;}
 
 	.boxactivite-B img  
 	{height: 200px;}	
+
 }
 
 
