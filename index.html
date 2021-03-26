@@ -3,41 +3,41 @@
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css"/>
 	<script src="https://kit.fontawesome.com/fdbfa822b3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css"/>
 	<title>Reservia/Votre hébergement vacances</title>
 </head>
 
 <body>
-<div id="pagecontainer">
+<div id="pagecontainer"> <!--header + main-->
 	<header><!-- 2 blocs : logo, menu-->
-		<div  >
+		<div>
 			<img src="img/logo.png" class="logo" alt="logo reservia"/>
 			<h1 hidden>Réservia Hébergement vacances</h1> <!--titre H1 caché-->
 		</div>
-		<div id="menu">
+		<div id="menu"><!-- menu de navigation + lien pour s'inscrire-->
 			<nav>
 				<ul>
 				<li><a href="#sectionhebergement"> Hébergements </a></li>
-				<li><a href="#sectionactivités"> Activités </a></li>
+				<li><a href="#sectionactivites"> Activités </a></li>
 				</ul>
 			</nav>
-			<div class= "sinscrire"><a href=#> S'inscrire </a>
+			<div class= "sinscrire">
+				<a href=#> S'inscrire </a>
 			</div>
 		</div>
 	</header>
 
 	<main> <!-- 3 grandes sections-->
-		<section ><!-- module de recherche et filtres-->
+		<section id="searchsection" ><!-- module de recherche et filtres-->
 			<h2>Trouvez votre hébergement pour des vacances de rêve</h2>
 			<p>En plein centre ville ou en pleine nature</p>
 			<form method="post" action="traitement.php"> <!--formulaire de recherche-->
 				<div id="boxsearch">	
 					<i class="fas fa-map-marker-alt"></i>
-					<input type="search" placeholder="Marseille,France" name="Ville"/>
+					<input type="search" placeholder="Marseille, France" name="Ville"/>
 					<label> <span class="recherche">Rechercher </span> <i class="fas fa-search"></i> </label>
 				</div>
 			</form>
@@ -70,8 +70,8 @@
 			</div>
 		</section>
 		
-		<section id="sectionhebergement"> <!-- hebergements scindé en 2 blocs: div"hotel" et aside-->
-			<div id="hotels"> <!-- 3 blocs : titre, div"cartes", paragraphe-->
+		<section id="sectionhebergement"> <!--  2 blocs: div "hotel" et aside-->
+			<div id="hotels"> <!-- 3 blocs : titre, div"cards", paragraphe -->
 				<h2>Hébergements à Marseille</h2>
 					<div id="cards"> <!-- 6 blocs composés d'un lien et d'une  figure"image +legende"-->
 						<a href="#" class="boxcard">
@@ -156,8 +156,7 @@
 					</div>
 				<p id="afficher"> Afficher plus </p>
 			</div>
-
-			<aside><!-- 2 blocs: titre, div"cartespop"-->
+			<aside><!-- 2 blocs: titre, div"cardspop"-->
 				<div id="populaires"> <!--bloc titre-->
 					<h2>Les plus populaires</h2>
 					<i class="fas fa-chart-line"></i>
@@ -210,7 +209,7 @@
 			</aside>
 		</section>
 		
-		<section id="sectionactivités"><!-- activités scindé en 2 blocs: titre, div"activites"-->
+		<section id="sectionactivites"><!-- activités scindé en 2 blocs: titre, div"activites"-->
 			<h2> Activités à Marseille</h2>
 			<div id="activites"><!-- 4 blocs colonnes, 6 figures-->
 				<div class="boxactivite-A"><!-- 1bloc composé d'un lien et une figure"image format portrait + legende"-->
@@ -222,13 +221,13 @@
 						</figure>
 					</a>
 				</div>	
-				<div class="boxactivite-B"><!-- 2 blocs composés d'un lien et une figure"image format paysage + legende"-->
+				<div class="boxactivite-B"><!-- 2 blocs composés chacun d'un lien et une figure"image format paysage + legende"-->
 					<a href="#">
-					<figure class="activite1" >
+						<figure class="activite1" >
 							<img src="img/Pomegues.jpg" alt="Fort de Pomègues" />
 							<figcaption> <p class="legende"> Fort de Pomègues </p>
 							</figcaption>
-					</figure>
+						</figure>
 					</a>
 					<a href="#" >
 						<figure class="activite2">
@@ -268,7 +267,7 @@
 	</main>
 </div>
 
-	<footer> <!-- 3 blocs principaux en colonnes-->
+	<footer> <!-- 3 blocs principaux -->
 		<section><!--A propos-->
 			<h2> A propos </h2>
 			<p>Fonctionnement du site </p>

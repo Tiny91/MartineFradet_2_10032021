@@ -1,12 +1,10 @@
 
 		/* commun à toute la page */
+
 body
-{font-family: 'Raleway', sans-serif;}
-
-#pagecontainer  /* marge commune au header et au main*/ 
-{width: 95%;
-margin: auto;}
-
+{font-family: "Raleway", sans-serif;
+margin: 0px;}
+ 	
 a
 {text-decoration: none;
 color: black;}
@@ -19,35 +17,42 @@ figure  /*proprietes communes à toutes les figures: marges,angles arrondis*/
 margin: 15px;
 padding: 5px;}
 
+		/* marge commune au header et au main*/ 
+#pagecontainer 
+{width: 95%;
+margin: auto;}
+
 
 		/* header: logo et menu*/
 header
 {display: flex;
 justify-content: space-between;
-flex-wrap: wrap;}
+flex-wrap: wrap;
+padding-top: 10px;
+padding-bottom: 10px}
 
 .logo
 {width: 100px;}
 
 #menu
 {display: flex;
-align-items:center;}
-
+align-items:center;
+font-size: 1.1em;
+margin-right: 20px}
 
 nav ul
-{display: flex;
-justify-content: space-around;
-min-width: 500px;
-padding-left:30px;}
+{display: flex;}
 
 li
 {list-style-type: none;}
 
-nav a:hover
+li a
+{padding: 20px 50px 20px 50px;}
+
+nav a:hover  /*changement d'aspect au survol du menu de nav*/
 {border-top: 2px solid #0065fc;
 color: #0065fc;
-padding-top: 20px}
-
+font-weight: bold;}
 
 .sinscrire a
 {font-weight: bold;
@@ -60,13 +65,12 @@ footer
 {display: flex;
 justify-content: space-around;
 background-color: #f2f2f2;
-margin-top: 30px;
+margin-top: 40px;
 padding-bottom: 40px;
-padding-top: 40px;}
+padding-top: 30px;}
 
 
-
-		/* module de recherche*/
+		/* searchsection*/
 
 #boxsearch /* alignement et hauteur du formulaire*/
 {display: flex;
@@ -79,46 +83,43 @@ border-radius:15px 0px 0px 15px;}
 
 input	/*champ de reherche*/
 {border: 1px solid #f2f2f2;
-width: 250px;
+width: 200px;
 font-weight: bold;
+color: black;
 text-indent: 5px;}
 	
 label 	/*bouton recherche*/
 {background-color: #0065fc;
 color: white;
-padding: 12px 12px 3px 12px;;
+padding: 15px 15px 0px 15px;
 border-radius:0px 15px 15px 0px;
 font-weight: bold;}
 
-.fa-search
-{display: block;
-visibility: hidden}
+.fa-search /* icone loupe */
+{visibility: hidden}
 
-
-		/*les filtres*/
-
-#filtres
+#filtres  /* alignement du bloc filtres*/
 {display: flex;
 margin-top: 20px;
 flex-wrap: wrap;}
+
+.titre
+{margin: 5px 45px 00px 5px;}
 
 #boxfiltres
 {display: flex;
 flex-wrap: wrap;}
 
-.titre
-{margin-right: 20px}
-
-.filtre 	/* les 4 boutons-filtres*/
+.filtre 	/* les 4 blocs boutons-filtres*/
 {height: 50px;
 display: flex;
 align-items: center;
 border-radius: 40px;
 border: 2px #f2f2f2 solid; 
-margin:10px 20px 10px 00px;/* espacement bouton*/
-padding-right: 30px;} /* marge interieure bouton*/
+margin:10px 40px 10px 00px; /* espacement bouton*/
+padding-right: 35px;}  /* marge interieure bouton*/
 
-.filtre i /* les 4 icones des filtres*/
+.filtre i   /* les 4 icones des filtres*/
 {background-color:#deebff;
 color: #0065fc;
 font-size: 1.3em;
@@ -149,7 +150,7 @@ border: 2px #f2f2f2 solid;
 margin-right: 10px}
 
 
-			/* commun à la section hébergement*/
+			/* commun à sectionhebergement */
 
 #sectionhebergement /* 2 blocs cote à cote*/
 {display:flex;
@@ -162,16 +163,14 @@ font-size: 0.8em;}
 
 .greystar  /* modif pour étoile grise*/
 {color: #f2f2f2;}
-
 	
-			/* Hebergement Marseille*/
+			/* bloc hotels */
 
-#hotels 	/* forme et couleur du bloc hotel*/
-{max-width: 70%;
-background-color: #f2f2f2;
+#hotels /* forme et couleur */
+{background-color: #f2f2f2;
 border-radius: 20px;
 margin-right: 10px;
-padding: 20px 25px 30px 25px;}
+padding: 20px 0px 30px 20px;}
 
 #hotels h2
 {margin-left: 25px}
@@ -179,24 +178,23 @@ padding: 20px 25px 30px 25px;}
 #afficher
 {margin-left: 25px;
 font-weight: bold;}
+			
+			/* bloc cards*/
 
-
-#cards 	/* alignement et retour ligne des 6 boites cartes */
+#cards 	/* alignement */
 {display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-margin-right: 20px;
-margin-left: -10px}
+margin-right: 20px;}
 
-.boxcard 	/* taille de chaque boite*/
+.boxcard /* taille de chaque box */
 {width: 30%;
 min-width: 200px;
 margin-left: 15px;
-margin-right: 15px}
+margin-right: 15px;}
 
 .boxcard figure /*couleur, forme, taille des figures*/
 {background-color: white;
-width: 95%;
 min-width: 200px;
 box-shadow: 10px 10px 10px #c3c3c3;}
 
@@ -210,22 +208,22 @@ border-radius: 20px 20px 0px 0px;}
 {margin-left: 15px}
 
 
-			/*populaires*/
+			/* aside */
 
-aside   /* forme et couleur du bloc aside*/
+aside   /* forme et couleur */
 {background-color: #f2f2f2;
 border-radius: 20px;
 margin-left: 20px;
 padding-bottom: 20px;}
 
-#populaires /* alignement titre + icone*/
+#populaires /* alignement titre + icone */
 {display: flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
-padding-top: 20px;}
+padding:20px 35px 0px 35px;}
 
-#populaires i
-{ font-size: 1.3em }
+#populaires i /* taille icone */
+{font-size: 1.3em }
 
 #cardspop
 {margin: 00px 5px 20px 15px;}
@@ -241,7 +239,7 @@ margin-right: 15px}
 display: flex;
 box-shadow: 10px 10px 10px #c3c3c3;}
 
-.boxpop img /* proprietes photo*/
+.boxpop img /* proprietes photo */
 {width: 40%;
 height: 100%;
 object-fit: cover;
@@ -251,178 +249,194 @@ border-radius: 20px 0px 0px 20px;}
 {margin-left: 15px;}
 
 
-			/*section Activités*/
-#sectionactivités
-{display: flex;
-flex-direction: column;
-}
+			/*sectionactivites*/
 
-#activites /* taille et alignement du bloc activités*/
+#sectionactivites
 {display: flex;
-}
+flex-direction: column;}
 
+#activites 		/* taille et alignement du bloc activités*/
+{display: flex;}
+	
 #activites figcaption
 {padding-left: 15px}
 
 .boxactivite-A  /* hauteur et largeur de la boite 1figure*/
-{width: 25%;
-height: 600px;
-}
+{width: 25%;}
 
 .boxactivite-A figure /* hauteur et largeur de la figure A*/
-{height: 560px;
+{height: 550px;
 box-shadow: 10px 10px 10px #f2f2f2;}
 
-.boxactivite-A img /* proprietes photo*/
+.boxactivite-A img /* proprietes photo */
 {width: 100%;
-height: 480px;
+height: 500px;
 object-fit: cover;
 border-radius: 20px 20px 0px 0px;}
 
 .boxactivite-B  /* hauteur et largeur de la boite 2figures*/
-{width: 25%;
-height: 600px;
-}
+{width: 25%;}
 
-.activite1 		 /* hauteur et largeur de la figure B1*/
-{height: 300px;
+.activite1 		/* hauteur et largeur de la figure B1*/
+{height: 310px;
 box-shadow: 10px 10px 10px #f2f2f2;}
 
-.activite2  	/* hauteur et largeur de la figure B2*/
-{height: 230px;
-box-shadow: 10px 10px 10px #f2f2f2;}
-
-.boxactivite-B img  /* proprietes photo*/
+.activite1 img 	/* proprietes photo */
 {width: 100%;
-height: 80%;
+height: 260px;
 object-fit: cover;
 border-radius: 20px 20px 0px 0px;}
+
+.activite2  	/* hauteur et largeur de la figure B2*/
+{height: 210px;
+box-shadow: 10px 10px 10px #f2f2f2;}
+
+.activite2 img  /* proprietes photo */
+{width: 100%;
+height: 160px;
+object-fit: cover;
+border-radius: 20px 20px 0px 0px;}
+
 
 
 /*------------------------------------------*/
 
 				/*media queries*/
+
 /*-------------------------------------------*/
 
 		/* commun tablette et smartphone*/
 
 @media screen  and (max-width: 1024px)
 {
-	body
-	{width: auto;}
-		
-	#menu  /* menu sur 2 lignes avec s'inscrire en haut*/
+
+	#menu  	/* menu sur 2 lignes avec s'inscrire en haut */
 	{flex-direction: column-reverse;
 	align-items: center;
 	margin-top: 20px} 
 	
 	nav a:hover /* bordure bleue sous l'element survolé*/
 	{border-top: hidden;
-	border-bottom: 2px solid #0065fc;
-	padding-bottom: 20px}
+	border-bottom: 2px solid #0065fc;}
 
 	footer
 	{font-size: 0.9em}
+	
+	#sectionhebergement /* agencement en colonnes en commencant par les populaires*/
+	{flex-direction: column-reverse;}
+
+	#hotels /* suppression du fonds gris*/
+	{background-color: white;}
+
+	#activites figcaption
+	{font-size: 0.9em}
+
 }	
 	
-			/* pour smartphone */
+		/* pour smartphone */
 
-@media screen and (min-width: 310px) and (max-width: 799px)
+@media screen and (min-width: 320px) and (max-width: 767px)
 {
-					/*header*/
+	
+	#pagecontainer
+	{width: 98%}
+	
+					/* header */
 	#menu 
 	{align-items: flex-end;
-	width: 200px;	} 
+	width: 200px;} 
 	
-	nav ul  /* ligne horizontale sous le menu*/
+	nav ul  /* ligne horizontale sous le menu */
 	{border-bottom: 2px solid #f2f2f2;
 	padding-bottom: 20px;
-	min-width: 350px;	}
+	min-width: 350px;
+	padding-top: 20px;}
 
-					/*footer*/
+					/* footer */
 	footer 
 	{flex-direction: column;
 	padding-left: 30px}
 
+				 	/* searchsection */
 
-		 	/* module de recherche*/
+	#searchsection	
+	{margin-left: 15px} 	
 
-	label  /* bouton arrondi*/
-	{border-radius:15px 15px 15px 15px;}
+	label  /* bouton arrondi */
+	{border-radius:15px 15px 15px 15px;
+	margin-left: -15px}
 
-	.fa-search   /* texte rechercher remplacé par la loupe*/
+	.fa-search   /* texte remplacé par la loupe */
 	{visibility: visible}
 	.recherche
 	{display: none;}
 
-	.filtre 	/* les 4 boutons-filtres*/
-	{margin: 3px 15px 3px 0px;/* espacement bouton*/
-	padding-right: 10px; /* marge interieure bouton*/
-	font-size: 0.8em;}
+	.filtre 	/* modif des 4 blocs boutons-filtres */
+	{margin: 5px 15px 5px 0px; /* espacement bouton */
+	padding-right: 10px;      /* marge interieure bouton */
+	font-size: 0.9em}
 
-		
-				/*section hebergement*/
-	#sectionhebergement /* agencement en colonnes en commencant par les populaires*/
-	{flex-direction: column-reverse;}
+					/*section hebergement */
+	
+	aside /* suppression des bords arrondis */
+	{border-radius: 0px;
+	margin-left: 0px;}
 
-	aside /* plus de bords arrondis*/
-	{border-radius: 0px	}
+	#populaires
+	{padding-left: 25px}
 
 	#cardspop
 	{margin: auto;}
 
-	.boxpop  /* taille de chaque boite*/
-	{min-height: 240px;
-	 min-width :310px;}
-
-	.boxpop img /*ajustement photo*/
+	.boxpop img  /* ajustement photo */
 	{min-width: 40%;}
 
-	#hotels /* supression du fonds gris*/
-	{background-color: white;
-	margin: auto;}
+	#hotels  
+	{max-width: 100%;
+	padding: 15px 10px 0px 0px;}
 
 	.boxcard
-	{width: 100%}
+	{width: 100%;
+	margin-left:0px;}
 
 	.boxcard figure
-	{width: 100%}
+	{width: 100%;
+	height: 210px;
+	font-size: 0.9em}
 
 	.boxcard figure img
-	{height: 120px}
+	{height: 110px}
 
 
-       			/*section Activités*/
+       				/*sectionactivites*/
 
-   #sectionactivités h2
-   {margin-left: 30px;}
+   #sectionactivites h2
+   	{margin-left: 30px;}
 
-    #activites 
-    {flex-direction: column;}
+    #activites /* modif alignement */
+  	{flex-direction: column;
+    width: 98%;}
 
     .boxactivite-A  
-	{width: 100%;
-	height: 300px;
-	margin:auto;}
+	{width: 100%;}
 
 	.boxactivite-A figure 
-	{height: 260px;}
-
-	.boxactivite-A img
 	{height: 200px}
 
+	.boxactivite-A img
+	{height: 155px}
+
 	.boxactivite-B  
-	{width: 100%;
-	margin:auto;}
+	{width: 100%;}
 	
 	.activite1 		
-	{height: 260px;}
+	{height: 200px;}
 
 	.activite2  	
-	{height: 260px;}
+	{height: 200px;}
 
 	.boxactivite-B img  
-	{height: 200px;}	
+	{height: 155px;}	
 
 }
 
