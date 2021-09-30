@@ -1,4 +1,3 @@
-# MartineFradet_2_10032021
 <h1>Projet d'étude OpenClassrooms pour l'intégration d'une maquette en HTML et CSS</h1>
 Lien vers le site githubPage : https://tiny91.github.io/MartineFradet_2_10032021/#
 
